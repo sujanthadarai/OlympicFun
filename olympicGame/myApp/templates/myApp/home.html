@@ -1,0 +1,272 @@
+{% extends 'myApp/base.html' %}
+{% block title %} |HOme
+{% endblock title %}
+
+{% block content %}
+  
+<br>
+<header>
+    <nav class="navbar">
+        <span class="hamburger-btn material-symbols-rounded">menu</span>
+        
+        <ul class="links">
+            <span class="close-btn material-symbols-rounded">close</span>
+         
+    </nav>
+</header>
+
+<div class="blur-bg-overlay"></div>
+<div class="form-popup">
+    {% load static %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>!</strong> {{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  
+{% endfor %}
+  
+{% endif %}
+    <span class="close-btn material-symbols-rounded">close</span>
+    <div class="form-box login">
+        <div class="form-details">
+            <h2>Welcome Back</h2>
+            <p>Please log in using your personal information to stay connected with us.</p>
+        </div>
+        <div class="form-content">
+            <h2>LOGIN</h2>
+            <form action="{% url 'log_in' %}" method="POST">
+                {% csrf_token %}
+                <div class="input-field">
+                    <input type="text" name="email" required >
+                    <label>Email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" name="password" required >
+                    <label>Password</label>
+                </div>
+                <a href="#" class="forgot-pass-link">Forgot password?</a>
+                <button type="submit">Log In</button>
+            </form>
+            <div class="bottom-link">
+                Don't have an account?
+                <a href="#" id="signup-link">Signup</a>
+            </div>
+        </div>
+    </div>
+    <div class="form-box signup">
+        <div class="form-details">
+            <h2>Create Account</h2>
+            <p>To become a part of our community, please sign up using your personal information.</p>
+        </div>
+        <div class="form-content">
+            <h2>SIGNUP</h2>
+            <form method="POST" action="#">
+                {% csrf_token %}
+                <div class="input-field">
+                    <input type="email" name="email" required>
+                    <label>Enter your email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" name="password" required>
+                    <label>Create password</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" name="password1" required>
+                    <label>Confirm password</label>
+                </div>
+                <div class="policy-text">
+                    <input type="checkbox" id="policy">
+                    <label for="policy">
+                        I agree the
+                        <a href="#" class="option">Terms & Conditions</a>
+                    </label>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="bottom-link">
+                Already have an account? 
+                <a href="#" id="login-link">Login</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Banner start -->
+<!-- Log on to codeastro.com for more projects -->
+<div class="banner" id="banner">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner banner-slider-inner text-center">
+            <div class="carousel-item banner-max-height active item-bg">
+                <img class="d-block w-100 h-100" src="{% static 'img/game.jpg' %}" alt="banner">
+                <div class="carousel-content container banner-info-2 bi-2 text-left">
+                    <h3>Welcome to <b style="color: orangered;">OlympicFun</b><br> 2024</h3><br>
+                        <p style="text-align: left;">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br>Laudantium rem necessitatibus cumque tempore autreprehenderit.<br> Aperiam doloremque assumenda veritatis eius <br>itaque dolorum nobis laboriosam incidunt voluptas qui? Fugiat,<br> nemo aspernatur.</p>
+                    <!-- button -->
+                    <button class="button">
+                        Read More
+                        <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+                          <path
+                            clip-rule="evenodd"
+                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                            fill-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </button>
+                      
+                    <!-- button end -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner end -->
+
+<!-- Search box 2 end -->
+
+<!-- Featured car start -->
+<div class="featured-fun content-area-5">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title">
+            <h1>World Wide <span>Olympics</span> Partner</h1>
+            <div class="div2">
+                <img src="{% static 'img/samsung.avif' %}" alt="images" class="img">
+                <img src="{% static 'img/coca.webp' %}" alt="images" class="img">
+                <img src="{% static 'img/visa.png' %}" alt="images" class="img">
+                <img src="{% static 'img/stock.avif' %}" alt="images" class="img">
+                <img src="{% static 'img/esawa.png' %}" alt="images" class="img">
+        </div>
+        </div>
+    </div>
+</div>
+<!-- News start -->
+<div class="services_section layout_padding">
+    <div class="container">
+       <div class="row">
+          <div class="col-sm-12">
+             <h1 class="services_taital " style='color:Red'>NEWS</h1>
+            
+          </div>
+       </div>
+       <div class="services_section_2">
+          <div class="row">
+             <div class="col-lg-4 col-sm-12 col-md-4">
+                <div class="box_main active">
+                   <div class="house_icon">
+                      <img src="{% static 'img/boxing.jpeg' %}" class="image_1">
+                      <img src="{% static 'img/boxing1.jpeg' %}" class="image_2">
+                   </div>
+                   <h3 class="decorate_text">Boxing</h3>
+                   <p class="tation_text">Boxing 1st World Qualification Tournament 2024:.
+                    Boxing | Olympic Qualifier | 1st World Qualifica </p>
+                   <div class="readmore_bt"><a href="#">Read More</a></div>
+                </div>
+             </div>
+             <div class="col-lg-4 col-sm-12 col-md-4">
+                <div class="box_main">
+                   <div class="house_icon">
+                      <img src="{% static 'img/surfing.webp' %}" class="image_1">
+                      <img src="{% static 'img/surfing-boy.jpg' %}" class="image_2">
+                   </div>
+                   <h3 class="decorate_text">Surfing</h3>
+                   <p class="tation_text">Once "reckless" teen, now cautious dad - How child prodigy Jack</p>
+                   <div class="readmore_bt"><a href="#">Read More</a></div>
+                </div>
+             </div>
+             <div class="col-lg-4 col-sm-12 col-md-4">
+                <div class="box_main">
+                   <div class="house_icon">
+                      <img src="{% static 'img/swimming.jpg' %}" class="image_1">
+                      <img src="{% static 'img/swimming1.jpeg' %}" class="image_2">
+                   </div>
+                   <h3 class="decorate_text">Swimming</h3>
+                   <p class="tation_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                   <div class="readmore_bt"><a href="#">Read More</a></div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+ <!-- news end -->
+<!-- Popular games start -->
+<div class="featured-fun content-area">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title">
+            <h1>Popular<span>Games</span></h1>
+            <p></p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="fun-box">
+                    <div class="fun-thumbnail">
+                        <a href="#" class="fun-img">
+                            <div class="tag"></div>
+                            <img class="d-block w-100" src="{% static 'img\atheletic.webp' %}" alt="car not shown " style="min-height: 262px; max-height: 262px;">
+                            <div class="facilities-list clearfix">
+                                <!-- <ul>
+                                    <li>
+                                        <span><i class="flaticon-way"></i></span> mi
+                                    </li>
+                                    <li>
+                                        <span><i class="flaticon-calendar-1">gbvkjgh</i></span>2023
+                                    </li>
+                                    <li>
+                                        <span><i class="flaticon-manual-transmission"></i></span>ho
+                                    </li>
+                                </ul> -->
+                            </div>
+                        </a>
+                        <!-- error or danger in django  -->
+                        <!-- django msg framework doc -->
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+			<!-- Log on to codeastro.com for more projects -->
+
+        </div>
+    </div>
+</div>
+<!-- game end -->
+
+    <div class="container">
+       <div class="row">
+          <div class="col-md-6">
+             <div class="about_taital_main">
+                <div class="about_taital"> Swimming</div>
+                <p class="about_text">Tokyo Olympic: Gaurika creates new national record.</p>
+                <p class="about_text">Nepali's golden girl Summer Gaurika: Why it's all about work ethic</p>
+                <div class="read_bt"><a href="#">Read More</a></div>
+             </div>
+          </div>
+          <div class="col-md-6">
+             <div class="about_img"><img src="{% static 'img/gaurika.jpg' %}"></div>
+          </div>
+       </div>
+    </div>
+    <div class="container">
+        <div class="row">
+           <div class="col-md-6">
+            <div class="about_imgr"><img src="{% static 'img/paralympicgames.webp' %}"></div>    
+           </div>
+           <div class="col-md-6">
+              <div class="about_taital_mainr">
+                <div class="about_taitalr">Paralympic Games</div>
+                <p class="about_textr"></p>
+                <p class="about_textr">The Paralympic Games provide a platform for Para athletes with a diverse range of impairments to showcase their outstanding abilities to millions of spectators and billions of TV viewers.</p>
+                <div class="read_btr"><a href="#">Read More</a></div>
+             </div>
+           </div>
+        </div>
+     </div>
+  
+{% endblock content %}

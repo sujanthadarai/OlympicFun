@@ -1,0 +1,279 @@
+
+/* services section start */
+
+.services_section {
+    background-color: aliceblue;
+    width: 100%;
+    float: left;
+    height: auto;
+    padding-bottom: 30px;
+    background-attachment: fixed;
+}
+
+.services_taital {
+    width: 100%;
+    float: left;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.services_text {
+    font-size: 15px;
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color:white;
+    margin: 0px;
+    text-align: center;
+}
+
+.house_icon {
+    width: 200px;
+    height: auto;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.house_icon img {
+    width: 350px;
+    min-height: 300px;
+}
+
+.box_main .house_icon .image_2 {
+    display: none;
+}
+
+.box_main:hover .house_icon .image_2 {
+    display: block;
+}
+
+.box_main:hover .house_icon .image_1 {
+    display: none;
+}
+
+.box_main:hover {
+    background-color: #ffffff;
+}
+
+.box_main {
+    width: 100%;
+    color: #000;
+    /* background-color: #adadad; */
+    background-image: url('../img/bg-img-6.jpg');
+    padding: 20px 10px;
+    box-shadow: 0px 0px 18px -6px;
+}
+.box_main .decorate_text {
+    color: #696262;
+}
+
+.box_main .tation_text {
+    color: #696262;
+}
+
+.box_main:hover .decorate_text {
+    color: #000;
+}
+
+.box_main:hover .tation_text {
+    color: #000;
+}
+
+.box_main:hover .readmore_bt {
+    display: block;
+}
+
+.box_main:hover .readmore_bt a {
+    color: #ffffff;
+    background-color: #000;
+}
+
+.services_section_2 {
+    width: 100%;
+    float: left;
+    padding-top: 20px;
+}
+
+.decorate_text {
+    width: 100%;
+    font-size: 28px;
+    color: #ffffff;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.tation_text {
+    width: 100%;
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0px;
+    text-align: center;
+}
+
+.readmore_bt {
+    width: 175px;
+    padding-top: 20px;
+    margin: 0 auto;
+    display: flex;
+    display: none;
+    padding-bottom: 20px;
+}
+
+.readmore_bt a {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    background-color: #070603;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.readmore_bt a:hover {
+    color: #ffffff;
+    background-color: #f76d37;
+}
+
+/* services section end */
+
+
+/* red dot for  live */
+.red-dot {
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  /* end live dot */
+
+  /* about_section */
+  
+
+
+
+.about_taital_main {
+    width: 100%;
+    float: left;
+    padding: 120px 0px;
+}
+
+.about_taital {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #f76d37;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #4c4c4b;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.about_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #4c4c4b;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.read_bt {
+    width: 175px;
+    float: left;
+    padding-top: 40px;
+}
+
+.read_bt a {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    background-color: #252525;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px;
+}
+
+.read_bt a:hover {
+    color: #ffffff;
+    background-color: #f76d37;
+}
+.about_img img{
+    height: 400px;
+}
+
+  /* endabout */
+
+  
+.about_taital_mainr {
+    width: 100%;
+    float: right;
+    padding: 0px 60px ;
+}
+
+.about_taitalr {
+    width: 100%;
+    float: right;
+    font-size: 40px;
+    color: #f76d37;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about_textr {
+    width: 100%;
+    float: right;
+    font-size: 16px;
+    color: #4c4c4b;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.about_textr {
+    width: 100%;
+    float: right;
+    font-size: 16px;
+    color: #4c4c4b;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.read_btr {
+    width: 175px;
+    float: right;
+    padding-top: 20px;
+}
+
+.read_btr a {
+    width: 100%;
+    float: right;
+    font-size: 18px;
+    background-color: #252525;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px;
+}
+
+.read_btr a:hover {
+    color: #ffffff;
+    background-color: #f76d37;
+}
+.about_imgr img{
+    height: 340px;
+}
+
+  /* endabout */

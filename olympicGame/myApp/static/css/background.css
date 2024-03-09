@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin:0;
+  padding:0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing:border-box;
+}
+.banner{
+  position:relative;
+  height:100vh;
+  width:100%;
+  background:url('../img/car-1.jpg');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+h2{
+  position:relative;
+  color:#fff;
+  font-size:12rem;
+}
+.clouds{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  pointer-events:none;
+}
+.clouds img{
+  position:absolute;
+  bottom:0;
+  max-width:100%;
+  animation:animate calc(2s * var(--i)) linear infinite;
+}
+@keyframes animate{
+  0%{
+    opacity:0;
+    transform:scale(1);
+  }
+  25%, 75%{
+    opacity:1;
+  }
+  100%{
+    opacity:0;
+    transform:scale(3);
+  }
+}
+section{
+  padding:20px 40px;
+}
+section h1{
+  font-size:4rem;
+  margin-bottom:20px;
+}
+@media screen and (max-width: 1000px){
+  h2{
+    font-size:8rem;
+  }
+  h1{
+    font-size:2rem;
+  }
+}
+/* @media screen and (max-width: 800px){
+  h2{
+    font-size:6rem;
+  }
+  h1{
+    font-size:1.2rem;
+  }
+} */
